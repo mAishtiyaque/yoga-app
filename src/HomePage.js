@@ -1,7 +1,7 @@
 import './HomePage.css'
 import { useAuthValue } from './AuthContext'
 import { useNavigate } from 'react-router-dom'
-import img from './right.jpg'
+//import img from '../public/right.jpg'
 
 function HomePage() {
     const { currentUser } = useAuthValue()
@@ -33,7 +33,7 @@ function HomePage() {
                     </button> 
                 </div>
                 <div className="home_main_img">
-                    <img src={img} alt="" />
+                <img src="https://drive.google.com/uc?export=view&id=1wG0KGh3nRJ3k1B1pKybmxEdQpO2Lx5cT" alt="drive image"/>
                 </div>
             </div>
         </div>
@@ -41,3 +41,4 @@ function HomePage() {
 }
 
 export default HomePage
+//https://drive.google.com/file/d/1wG0KGh3nRJ3k1B1pKybmxEdQpO2Lx5cT/view?usp=sharing
