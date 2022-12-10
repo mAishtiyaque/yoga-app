@@ -1,0 +1,32 @@
+
+.home_main{
+    padding: .8em;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.home_main > div{
+    padding: 10px 2em;
+}
+.home_main_img{
+    width: 100%;
+    position: relative;
+}
+.home_main_img img{
+    width: 100%;
+    border-radius: 20px;
+}
+.home_main_img::before{
+    content: '';
+    border-radius: 20px;
+    width: calc(100% - 4em);
+    height: calc(100% - 4em - 4px);
+    position:absolute;
+    background-color:#ffe4db44;
+}
+@media only screen and (max-width:600px) {
+    .home_main{
+        grid-template-columns: 1fr;
+    }
+}

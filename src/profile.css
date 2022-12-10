@@ -1,0 +1,121 @@
+.profile{
+    width: 90%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+.profile > div{
+    padding: 10px 2em;
+}
+.profile .profile_text{
+    display: flex;
+   
+}
+.profile .profile_text div:first-child{
+    font-size: 2em;
+    font-weight: bold;
+}
+.profile .profile_text div:last-child{
+    color:#6b502f;
+    font-weight: 600;
+    padding: 0 4px;
+}
+@media only screen and (max-width:600px) {
+    .profile{
+        grid-template-columns: 1fr;
+    }
+}
+
+/*Table css*/
+  .responsive-table {
+    width: 100%;
+    padding-inline-start: 0px;
+  }
+  .responsive-table  li {
+    border-radius: 3px;
+    padding: 16px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .responsive-table .table-header {
+    background-color: #95A5A6;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .responsive-table .table-row {
+      background-color: #ffffff;
+      box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+    }
+    .responsive-table .col {
+      flex-basis: 25%;
+    }
+    
+    @media all and (max-width: 767px) {
+        .responsive-table .table-header {
+        display: none;
+      }
+      .responsive-table 
+      li {
+        display: block;
+      }
+      .responsive-table 
+      .col {
+        
+        flex-basis: 100%;
+        
+      }
+      .responsive-table 
+      .col {
+        display: flex;
+        padding: 10px 0;
+        
+      }
+      .responsive-table 
+      .col::before {
+        color: #6C7A89;
+        padding-right: 10px;
+        content: attr(data-label);
+        flex-basis: 50%;
+        text-align: right;
+      }
+    }
+  
+
+    
+/* purchase form */
+.slots{
+    display: flex;
+  }
+  .labl {
+    display : block;
+    width: 100%;
+  }
+  .labl > input{ 
+    visibility: hidden;
+    position: absolute; 
+  }
+  .labl > input + div{ 
+    cursor:pointer;
+    border:2px solid transparent;
+  }
+  .labl > input:checked + div{ 
+    background-color: #f3b469;
+    border: 1px solid #ff6600;
+    border-radius: 4px;
+  }
+  .price{
+      display: flex;
+      justify-content: space-between;
+  }
+  .price span{
+      font-weight:600;
+      font-size: 1.1rem;
+  }
+  .status_text{
+      position: absolute;
+  top:4px;
+  width: calc(90% - 4px);
+  max-width: 350px;
+  }
