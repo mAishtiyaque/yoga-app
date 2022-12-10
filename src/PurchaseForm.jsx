@@ -10,18 +10,20 @@ const initialState={
     lastName: '',
     email: '',
     pslot: slots[1],
-    fee: 500
+    fee: 500,
+    age:18
 };
 function PurchaseForm({fetchPost}) {
     const { currentUser } = useAuthValue()
     const navigate = useNavigate();
     const [formValue, setFormVlaue] = useState(initialState)
-    const { firstName, lastName, email, pslot, fee } = formValue;
+    const { firstName, lastName, email, pslot, fee,age } = formValue;
     const [status, setStatus] = useState('')
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormVlaue(state => { return { ...state, [name]: value }; })
     }
+
     useEffect(()=>{
         setTimeout(()=>{
             setStatus('')
@@ -49,7 +51,7 @@ function PurchaseForm({fetchPost}) {
                 console.error("Error adding document: ", e);
             }
         }
-        console.log(formValue);
+        //console.log(formValue);
     }
     return (
         <div className="p_form">
@@ -71,12 +73,24 @@ function PurchaseForm({fetchPost}) {
                     placeholder="Enter your Last Name"
                     onChange={handleInputChange} />
                 <input
+                    type='number'
+                    name='age'
+                    value={age}
+                    min='18' 
+                    max='65'
+                    required
+                    placeholder="Enter your age"
+                    onChange={handleInputChange} />
+                <input
                     type='email'
                     name='email'
                     value={email}
+                    min={18}
+                    max={65}
                     required
                     placeholder="Enter your email"
                     onChange={handleInputChange} />
+                
                 <div className='slots'>
                     {
                         slots.map((slot, idx) => {

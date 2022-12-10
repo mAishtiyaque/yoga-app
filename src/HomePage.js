@@ -1,11 +1,6 @@
 import './HomePage.css'
-import { useAuthValue } from './AuthContext'
-import { useNavigate } from 'react-router-dom'
-//import img from '../public/right.jpg'
 
 function HomePage() {
-    const { currentUser } = useAuthValue()
-    const navigate = useNavigate();
     return (
         <div className="center">
             <div className='home_main'>
@@ -33,7 +28,7 @@ function HomePage() {
                     </button> 
                 </div>
                 <div className="home_main_img">
-                <img src="https://drive.google.com/uc?export=view&id=1wG0KGh3nRJ3k1B1pKybmxEdQpO2Lx5cT" alt="drive image"/>
+                <img src="https://drive.google.com/uc?export=view&id=1wG0KGh3nRJ3k1B1pKybmxEdQpO2Lx5cT" alt="side yoga"/>
                 </div>
             </div>
         </div>

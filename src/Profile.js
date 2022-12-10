@@ -7,26 +7,7 @@ import { useState, useEffect } from 'react';
 
 function Profile() {
     const { currentUser } = useAuthValue()
-    const [userPurchased, setUserPurchase] = useState([
-        // {
-        //     email: "mda.ug19.cs@nitp.ac.in",
-        //     fee: 500,
-        //     firstName: "Ishtiyaque",
-        //     id: "xj5qfWdZO1IdSXaF88yN",
-        //     lastName: "Ahmad",
-        //     pslot: "7-8AM",
-        //     regEmail: "ishtiyaque4755@gmail.com"
-        // },
-        // {
-        //     email: "mda.ug19.cs@nitp.ac.in",
-        //     fee: 500,
-        //     firstName: "Ishtiyaque",
-        //     id: "xj5qfWdZO1IdSXaF88yN",
-        //     lastName: "Ahmad",
-        //     pslot: "7-8AM",
-        //     regEmail: "ishtiyaque4755@gmail.com"
-        // }
-    ]);
+    const [userPurchased, setUserPurchase] = useState([]);
     const fetchPost = async () => {
         if(currentUser?.email!==undefined)
         {

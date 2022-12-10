@@ -1,9 +1,6 @@
 import { useNavigate } from 'react-router';
-//import { useDispatch, useSelector } from 'react-redux';
 import { useState, useEffect } from 'react'
-//import { userActions } from '../_actions';
 import './header.css'
-//import { EmailAuthCredential } from 'firebase/auth';
 import { useAuthValue } from './AuthContext'
 import { signOut } from 'firebase/auth'
 import { auth } from './firebase'
@@ -11,7 +8,6 @@ import { auth } from './firebase'
 function Header() {
     const { currentUser } = useAuthValue()
     const loggedin = currentUser?.email;
-    //const loggedin = currentUser?.emailVerified;
     const navigate = useNavigate();
     const [logg, setLogg] = useState("LOGIN");
     useEffect(() => {
@@ -50,13 +46,3 @@ function Header() {
     );
 };
 export default Header;
-
-function Nav() {
-    const navigate = useNavigate();
-    return (
-        <div className='nav_btn'>
-            <button className='btn_trans' onClick={() => navigate('/')}>Home</button>
-            <button className='btn_trans' onClick={() => navigate('/profile')}>Dashboard</button>
-        </div>
-    )
-}
