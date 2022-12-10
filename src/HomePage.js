@@ -1,7 +1,7 @@
 import './HomePage.css'
 import { useAuthValue } from './AuthContext'
 import { useNavigate } from 'react-router-dom'
-
+import img from './right.jpg'
 
 function HomePage() {
     const { currentUser } = useAuthValue()
@@ -33,13 +33,8 @@ function HomePage() {
                     </button> 
                 </div>
                 <div className="home_main_img">
-                    <img src="right.jpg" alt="" />
+                    <img src={img} alt="" />
                 </div>
-                {/* <p><strong>Email: </strong>{currentUser?.email}</p>
-                <p>
-                    <strong>Email verified: </strong>
-                    {`${currentUser?.emailVerified}`}
-                </p> */}
             </div>
         </div>
     )
